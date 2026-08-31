@@ -23,7 +23,6 @@ import {
 import { Button } from '@/components/ui/button';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Input } from '@/components/ui/input';
-import { Progress } from '@/components/ui/progress';
 
 type Career = {
   id: string;
@@ -182,7 +181,9 @@ export default function Home() {
           <aside className="rounded-lg border border-border bg-card shadow-sm lg:sticky lg:top-5">
             <div className="border-b border-border p-5">
               <div className="mb-3 flex items-center justify-between"><div><h2 className="font-semibold">Your profile</h2><p className="mt-1 text-xs text-muted-foreground">Tune the signals that shape your matches.</p></div><span className="text-sm font-bold text-primary">{completion}%</span></div>
-              <Progress value={completion} aria-label={`${completion}% profile complete`} />
+              <div className="h-1 w-full overflow-hidden rounded-full bg-muted" role="progressbar" aria-label="Profile completion" aria-valuenow={completion} aria-valuemin={0} aria-valuemax={100}>
+                <div className="h-full bg-primary transition-[width]" style={{ width: `${completion}%` }} />
+              </div>
             </div>
 
             <div className="max-h-[calc(100vh-180px)] space-y-6 overflow-y-auto p-5">
