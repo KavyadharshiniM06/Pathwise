@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: 'Pathwise | Semantic Career Recommendations',
-  description: 'Discover careers that fit your strengths, interests, and goals through explainable semantic matching.',
+  description: 'Find career paths that fit how you think, work, and grow with explainable semantic recommendations.',
 };
 
 export default function RootLayout({
